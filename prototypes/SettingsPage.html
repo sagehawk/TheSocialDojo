@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<!-- FILE NAME: SettingsFlow.html -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Social Dojo - Settings Flow</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        'journey-bg': '#F1F2F4', 'journey-dark': '#1C1C1E', 'journey-text-primary': '#1C1C1E',
+                        'journey-text-secondary': '#6D6D72', 'journey-accent': '#0A84FF', 'journey-card-bg': '#FFFFFF',
+                        'journey-fail': '#FF3B30',
+                    },
+                    borderRadius: { '4xl': '2.5rem', '3xl': '1.75rem', '2xl': '1.25rem' }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { background-color: #E5E5EE; }
+        .design-showcase { display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; gap: 2rem; padding: 2rem; }
+        .mobile-frame { width: 390px; height: 844px; background-color: #F1F2F4; border-radius: 50px; border: 10px solid #FFFFFF; box-shadow: 0 0 80px rgba(0,0,0,0.2); overflow: hidden; display: flex; flex-direction: column; position: relative; }
+        .screen-title { color: #888; font-size: 12px; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1.5rem; text-align: center; font-weight: 600; }
+    </style>
+</head>
+<body class="font-sans text-journey-text-primary">
+
+    <div class="design-showcase">
+        
+        <!-- SCREEN 1: THE MAIN SETTINGS PAGE -->
+        <div class="flex flex-col items-center">
+            <h2 class="screen-title">Settings Page</h2>
+            <div class="mobile-frame">
+                <div class="flex-1 overflow-y-auto">
+                    <div class="p-6"><h1 class="font-bold text-3xl tracking-tight text-journey-dark">Settings</h1></div>
+                    <div class="px-6 space-y-6">
+                        <!-- Profile Card -->
+                        <div class="bg-journey-card-bg shadow-sm rounded-2xl p-2">
+                            <a href="#" class="flex items-center justify-between p-3">
+                                <div class="flex items-center space-x-4"><div class="w-12 h-12 bg-gray-200 rounded-full"></div><div><h3 class="font-bold text-journey-dark">Socrates</h3><p class="text-sm text-journey-text-secondary">Edit Profile & Avatar</p></div></div>
+                                <svg class="w-5 h-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                            </a>
+                        </div>
+                        <!-- Main Settings Card -->
+                        <div class="bg-journey-card-bg shadow-sm rounded-2xl divide-y divide-gray-200">
+                            <a href="#" class="flex items-center justify-between p-4"><span class="font-semibold">Manage Subscription</span><svg class="w-5 h-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></a>
+                            <a href="#" class="flex items-center justify-between p-4"><span class="font-semibold">Notifications</span><svg class="w-5 h-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></a>
+                            <a href="#" class="flex items-center justify-between p-4"><span class="font-semibold">Help & Support</span><svg class="w-5 h-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></a>
+                        </div>
+                        <!-- Account Actions Card -->
+                        <div class="bg-journey-card-bg shadow-sm rounded-2xl divide-y divide-gray-200">
+                            <button class="w-full text-left font-semibold p-4">Log Out</button>
+                            <button class="w-full text-left font-semibold text-journey-fail p-4">Delete Account</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SCREEN 2: EDIT PROFILE PAGE -->
+        <div class="flex flex-col items-center">
+            <h2 class="screen-title">Edit Profile Page</h2>
+            <div class="mobile-frame">
+                <div class="flex-1 overflow-y-auto">
+                    <div class="p-4 flex items-center space-x-3 border-b border-gray-200"><button class="w-10 h-10 bg-journey-card-bg shadow-sm rounded-full flex items-center justify-center"><svg class="w-5 h-5 text-journey-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg></button><div class="text-center flex-1"><h1 class="font-bold text-lg text-journey-dark">Edit Profile</h1></div><div class="w-10 h-10"></div></div>
+                    <div class="p-6">
+                        <div class="flex flex-col items-center mb-8"><div class="relative"><div class="w-24 h-24 bg-gray-200 rounded-full"></div><button class="absolute -bottom-1 -right-1 w-8 h-8 bg-journey-accent text-white rounded-full flex items-center justify-center border-2 border-journey-bg"><svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" /></svg></button></div></div>
+                        <div class="bg-journey-card-bg shadow-md rounded-2xl p-5 mb-6"><div class="space-y-4"><div><label for="username" class="text-sm font-semibold text-journey-text-secondary">Username</label><input type="text" id="username" value="Socrates" class="w-full mt-1 p-3 bg-journey-bg border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-journey-accent"></div><div><label for="email" class="text-sm font-semibold text-journey-text-secondary">Email</label><input type="email" id="email" value="socrates@dojo.app" class="w-full mt-1 p-3 bg-journey-bg border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-journey-accent"></div></div></div>
+                        <div class="bg-journey-card-bg shadow-md rounded-2xl p-5"><h3 class="font-bold text-journey-dark mb-4">Change Password</h3><div class="space-y-4"><div><label for="current-password" class="text-sm font-semibold text-journey-text-secondary">Current Password</label><input type="password" id="current-password" class="w-full mt-1 p-3 bg-journey-bg border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-journey-accent"></div><div><label for="new-password" class="text-sm font-semibold text-journey-text-secondary">New Password</label><input type="password" id="new-password" class="w-full mt-1 p-3 bg-journey-bg border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-journey-accent"></div></div></div>
+                    </div>
+                    <div class="p-6"><button class="w-full bg-journey-accent text-white font-bold py-4 rounded-lg text-base">Save Changes</button></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SCREEN 3: MANAGE SUBSCRIPTION PAGE -->
+        <div class="flex flex-col items-center">
+            <h2 class="screen-title">Manage Subscription Page</h2>
+            <div class="mobile-frame">
+                <div class="flex-1 overflow-y-auto">
+                    <div class="p-4 flex items-center space-x-3 border-b border-gray-200"><button class="w-10 h-10 bg-journey-card-bg shadow-sm rounded-full flex items-center justify-center"><svg class="w-5 h-5 text-journey-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg></button><div class="text-center flex-1"><h1 class="font-bold text-lg text-journey-dark">Subscription</h1></div><div class="w-10 h-10"></div></div>
+                    <div class="p-6">
+                        <div class="bg-journey-card-bg shadow-md rounded-2xl p-5 mb-6">
+                            <p class="text-sm font-semibold text-journey-text-secondary mb-1">CURRENT PLAN</p>
+                            <h2 class="font-bold text-2xl text-journey-dark">Master Plan</h2>
+                            <p class="text-journey-text-secondary mt-1">$59 / month</p>
+                            <p class="text-xs text-journey-text-secondary mt-4 border-t border-gray-200 pt-3">Next billing date: August 16, 2025</p>
+                        </div>
+                        <div class="bg-journey-card-bg shadow-md rounded-2xl p-5 mb-6">
+                             <h3 class="font-bold text-journey-dark mb-4">Payment Method</h3>
+                             <div class="flex items-center space-x-3">
+                                <div class="w-12 h-8 bg-gray-200 rounded-md"></div> <!-- Placeholder for credit card icon -->
+                                <div>
+                                    <p class="font-semibold text-journey-dark">Visa ending in 4242</p>
+                                    <p class="text-sm text-journey-text-secondary">Expires 12/28</p>
+                                </div>
+                             </div>
+                        </div>
+                        <div class="space-y-4">
+                            <button class="w-full bg-journey-accent text-white font-bold py-4 rounded-lg text-base">Change Plan</button>
+                            <button class="w-full bg-transparent text-journey-fail font-bold py-4 rounded-lg text-base">Cancel Subscription</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

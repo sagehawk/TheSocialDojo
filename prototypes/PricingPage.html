@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!-- FILE NAME: PricingPage_Final.html -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Social Dojo - Choose Your Path</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        'journey-bg': '#F1F2F4', 'journey-dark': '#1C1C1E', 'journey-text-primary': '#1C1C1E',
+                        'journey-text-secondary': '#6D6D72', 'journey-accent': '#0A84FF', 'journey-card-bg': '#FFFFFF',
+                        'journey-success': '#34C759', 'journey-fail': '#FF3B30',
+                    },
+                    borderRadius: { '4xl': '2.5rem', '3xl': '1.75rem', '2xl': '1.25rem' }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { background-color: #E5E5EE; }
+        .design-showcase { display: flex; justify-content: center; padding: 2rem; }
+        .mobile-frame {
+            width: 390px;
+            height: 844px;
+            background-color: #F1F2F4;
+            border-radius: 50px;
+            border: 10px solid #FFFFFF;
+            box-shadow: 0 0 80px rgba(0,0,0,0.2);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+    </style>
+</head>
+<body class="font-sans text-journey-text-primary">
+
+    <div class="design-showcase">
+        <div class="mobile-frame">
+            
+            <div class="flex-1 overflow-y-auto">
+                
+                <!-- Header Section -->
+                <div class="p-6 text-center">
+                    <h1 class="font-black text-4xl tracking-tighter text-journey-dark mb-3">Choose Your Path</h1>
+                    <p class="text-journey-text-secondary max-w-md mx-auto">
+                        Start for free, upgrade when you're ready to master the art.
+                    </p>
+                </div>
+
+                <!-- Billing Toggle -->
+                <div class="px-6 mb-8">
+                    <div class="flex justify-center items-center bg-gray-200 rounded-lg p-1">
+                        <button class="flex-1 font-semibold text-sm py-2 rounded-md">Monthly</button>
+                        <button class="flex-1 font-semibold text-sm py-2 rounded-md bg-journey-card-bg shadow-sm text-journey-accent">
+                            Annual <span class="text-journey-success">(Save 20%)</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Pricing Tiers -->
+                <!-- Figma AI: The design is now consistent. The "Master" tier is highlighted with a border and a subtle shadow, not a jarring background color. -->
+                <div class="px-6 space-y-4">
+                    
+                    <!-- Initiate Tier (Free) -->
+                    <div class="bg-journey-card-bg border border-gray-200 rounded-2xl p-5">
+                        <h3 class="font-bold text-lg text-journey-dark">Initiate</h3>
+                        <p class="text-journey-text-secondary text-sm mb-3">For daily practice.</p>
+                        <p class="text-4xl font-extrabold tracking-tight text-journey-dark mb-4">$0</p>
+                        <ul class="text-sm space-y-3 mb-6">
+                            <li class="flex items-center"><svg class="w-5 h-5 text-journey-success mr-2 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>10 ⚡ Energy, refilled daily</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 text-journey-success mr-2 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Social Dojo Only</li>
+                            <li class="flex items-center text-journey-text-secondary"><svg class="w-5 h-5 mr-2 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>Cannot Save Relationships</li>
+                        </ul>
+                        <button class="w-full border-2 border-journey-accent text-journey-accent font-bold py-3 rounded-lg text-base">Your Current Plan</button>
+                    </div>
+
+                    <!-- Master Tier (Highlighted) -->
+                    <div class="bg-journey-card-bg border-2 border-journey-accent rounded-2xl p-5 relative shadow-lg">
+                        <div class="absolute top-0 -mt-3 left-1/2 -translate-x-1/2 bg-journey-accent text-white text-xs font-bold uppercase px-3 py-1 rounded-full">Most Popular</div>
+                        <h3 class="font-bold text-lg text-journey-dark">Master</h3>
+                        <p class="text-journey-text-secondary text-sm mb-3">For unlimited mastery.</p>
+                        <p class="text-4xl font-extrabold tracking-tight text-journey-dark mb-4">$59 <span class="text-base font-normal text-journey-text-secondary">/ month</span></p>
+                        <ul class="text-sm space-y-3 mb-6 text-journey-dark">
+                            <li class="flex items-center"><svg class="w-5 h-5 text-journey-success mr-2 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Unlimited ⚡ Energy</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 text-journey-success mr-2 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Unlock All Pro Dojos</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 text-journey-success mr-2 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Unlimited Saved Relationships</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 text-journey-success mr-2 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Unlock Full Debriefs</li>
+                        </ul>
+                        <button class="w-full bg-journey-accent text-white font-bold py-3 rounded-lg text-base">Upgrade to Master</button>
+                    </div>
+
+                </div>
+
+                <!-- Enterprise Tier -->
+                <div class="text-center px-6 py-10">
+                    <h3 class="font-bold text-lg text-journey-dark">Need More?</h3>
+                    <p class="text-journey-text-secondary text-sm mt-1 mb-4">For teams, businesses, and coaching professionals.</p>
+                    <button class="font-semibold text-journey-accent">Contact Sales</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

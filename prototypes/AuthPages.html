@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<!-- FILE NAME: AuthPages.html -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Social Dojo - Account</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        'journey-bg': '#F1F2F4', 'journey-dark': '#1C1C1E', 'journey-text-primary': '#1C1C1E',
+                        'journey-text-secondary': '#6D6D72', 'journey-accent': '#0A84FF', 'journey-card-bg': '#FFFFFF',
+                    },
+                    borderRadius: { '4xl': '2.5rem', '3xl': '1.75rem', '2xl': '1.25rem' }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { background-color: #E5E5EE; }
+        .design-showcase { display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; padding: 2rem; }
+        .mobile-frame { width: 390px; height: 844px; background-color: #F1F2F4; border-radius: 50px; border: 10px solid #FFFFFF; box-shadow: 0 0 80px rgba(0,0,0,0.2); overflow: hidden; display: flex; flex-direction: column; position: relative; }
+    </style>
+</head>
+<body class="font-sans text-journey-text-primary">
+
+    <div class="design-showcase">
+        <!-- LOGIN SCREEN -->
+        <div class="mobile-frame">
+            <div class="flex-1 flex flex-col justify-center p-6">
+                <div class="text-center mb-10">
+                    <h1 class="font-bold text-3xl tracking-tight text-journey-dark">Welcome Back</h1>
+                    <p class="text-journey-text-secondary mt-2">Log in to continue your journey.</p>
+                </div>
+
+                <div class="space-y-4">
+                    <div>
+                        <label for="email" class="text-sm font-semibold text-journey-text-secondary">Email</label>
+                        <input type="email" id="email" class="w-full mt-1 p-3 bg-journey-card-bg border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-journey-accent">
+                    </div>
+                    <div>
+                        <label for="password" class="text-sm font-semibold text-journey-text-secondary">Password</label>
+                        <input type="password" id="password" class="w-full mt-1 p-3 bg-journey-card-bg border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-journey-accent">
+                    </div>
+                </div>
+
+                <div class="mt-8">
+                    <button class="w-full bg-journey-accent text-white font-bold py-4 rounded-lg text-base">Log In</button>
+                </div>
+
+                <div class="text-center mt-6">
+                    <p class="text-sm text-journey-text-secondary">
+                        Don't have an account? <a href="#" class="font-semibold text-journey-accent">Sign Up</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SIGN UP SCREEN -->
+        <div class="mobile-frame">
+            <div class="flex-1 flex flex-col justify-center p-6">
+                <div class="text-center mb-10">
+                    <h1 class="font-bold text-3xl tracking-tight text-journey-dark">Create Your Account</h1>
+                    <p class="text-journey-text-secondary mt-2">Start your journey to social mastery.</p>
+                </div>
+
+                <div class="space-y-4">
+                    <div>
+                        <label for="signup-username" class="text-sm font-semibold text-journey-text-secondary">Username</label>
+                        <input type="text" id="signup-username" class="w-full mt-1 p-3 bg-journey-card-bg border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-journey-accent">
+                    </div>
+                    <div>
+                        <label for="signup-email" class="text-sm font-semibold text-journey-text-secondary">Email</label>
+                        <input type="email" id="signup-email" class="w-full mt-1 p-3 bg-journey-card-bg border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-journey-accent">
+                    </div>
+                    <div>
+                        <label for="signup-password" class="text-sm font-semibold text-journey-text-secondary">Password</label>
+                        <input type="password" id="signup-password" class="w-full mt-1 p-3 bg-journey-card-bg border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-journey-accent">
+                    </div>
+                </div>
+
+                <div class="mt-8">
+                    <button class="w-full bg-journey-accent text-white font-bold py-4 rounded-lg text-base">Create Account</button>
+                </div>
+
+                <div class="text-center mt-6">
+                    <p class="text-sm text-journey-text-secondary">
+                        Already have an account? <a href="#" class="font-semibold text-journey-accent">Log In</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
