@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<!-- FILE NAME: LandingPage_v3_Final.html -->
+<!-- FILE NAME: LandingPage_Mobile_Dojo_Definitive.html -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale-1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Social Dojo - Never Feel Awkward Again</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
@@ -15,23 +15,26 @@
                 extend: {
                     fontFamily: { sans: ['Inter', 'sans-serif'] },
                     colors: {
-                        'journey-bg': '#F1F2F4', 'journey-dark': '#1C1C1E', 'journey-text-primary': '#1C1C1E',
-                        'journey-text-secondary': '#6D6D72', 'journey-accent': '#0A84FF', 'journey-card-bg': '#FFFFFF',
-                        'journey-fail': '#FF3B30',
+                        'brand-bg': '#F9FAFB',
+                        'brand-dark': '#1E293B',
+                        'brand-text': '#111827',
+                        'brand-text-secondary': '#6B7280',
+                        'brand-accent': '#D97706',
+                        'brand-card': '#FFFFFF',
                     },
-                    borderRadius: { '4xl': '2.5rem', '3xl': '1.75rem', '2xl': '1.25rem' }
+                    borderRadius: { '2xl': '1.25rem', 'xl': '1rem' },
                 }
             }
         }
     </script>
 
     <style>
-        body { background-color: #E5E5EE; }
+        body { background-color: #E5E7EB; }
         .design-showcase { display: flex; justify-content: center; padding: 2rem; }
         .mobile-frame {
             width: 390px;
             height: 844px;
-            background-color: #F1F2F4;
+            background-color: #FFFFFF;
             border-radius: 50px;
             border: 10px solid #FFFFFF;
             box-shadow: 0 0 80px rgba(0,0,0,0.2);
@@ -40,77 +43,73 @@
             flex-direction: column;
             position: relative;
         }
+        .dojo-dark-bg {
+            background-color: #1E293B;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        details > summary { list-style: none; }
+        details > summary::-webkit-details-marker { display: none; }
+        details[open] .chevron { transform: rotate(90deg); }
     </style>
 </head>
-<body class="font-sans text-journey-text-primary">
+<body class="font-sans text-brand-text antialiased">
 
     <div class="design-showcase">
         <div class="mobile-frame">
             
             <div class="flex-1 overflow-y-auto">
                 
-                <div class="p-6 flex justify-between items-center">
-                    <h2 class="font-bold text-lg text-journey-dark">The Social Dojo</h2>
-                    <button class="font-semibold text-journey-dark text-sm">Log In</button>
-                </div>
+                <header class="p-6 flex justify-between items-center bg-brand-card/80 backdrop-blur-md sticky top-0 z-10">
+                    <h2 class="font-bold text-lg text-brand-dark">The Social Dojo</h2>
+                    <a href="#" class="font-semibold text-brand-dark text-sm bg-gray-200/70 px-4 py-2 rounded-full">Log In</a>
+                </header>
 
                 <!-- Hero Section -->
-                <!-- Figma AI: The language here is critical. It must be a direct painkiller. -->
-                <div class="text-center px-6 py-12">
-                    <h1 class="font-black text-5xl md:text-6xl tracking-tighter text-journey-dark leading-none mb-6">
-                        That Awkward Moment?
-                        <span class="text-journey-accent">Never Again.</span>
-                    </h1>
-                    <p class="text-lg text-journey-text-secondary max-w-md mx-auto mb-8">
-                        The Social Dojo is a private simulator to master the art of recovering from awkward conversations. Practice the moments that haunt you, so you can win in public.
-                    </p>
-                    <button class="bg-journey-accent text-white font-bold py-4 px-8 rounded-lg text-lg w-full max-w-xs mx-auto">
-                        Handle Your First Awkward Moment
-                    </button>
-                    <p class="text-sm text-journey-text-secondary mt-3">No signup required</p>
-                </div>
-
-                <!-- "Practice These Scenarios" Section -->
-                <!-- Figma AI: This section replaces the generic "How it Works." It lists specific, painful scenarios to create immediate relevance. -->
-                <div class="bg-journey-card-bg py-12 px-6">
-                    <h2 class="font-bold text-3xl text-center text-journey-dark mb-8">Train for the Moments That Matter</h2>
-                    <div class="space-y-4">
-                        <div class="bg-journey-bg rounded-xl p-4 text-center">
-                            <p class="font-semibold text-journey-dark">😬 Forgetting Someone's Name</p>
-                        </div>
-                        <div class="bg-journey-bg rounded-xl p-4 text-center">
-                            <p class="font-semibold text-journey-dark">😅 Recovering From a Bad Joke</p>
-                        </div>
-                        <div class="bg-journey-bg rounded-xl p-4 text-center">
-                            <p class="font-semibold text-journey-dark">🤐 Navigating an Awkward Silence</p>
-                        </div>
-                         <div class="bg-journey-bg rounded-xl p-4 text-center">
-                            <p class="font-semibold text-journey-dark">💼 Handling a Salary Negotiation</p>
-                        </div>
+                <section class="text-center px-6 pt-12 pb-16 bg-brand-card">
+                    <h1 class="font-black text-6xl tracking-tighter text-brand-dark leading-none mb-6">That Awkward Moment? <span class="text-brand-accent">Never Again.</span></h1>
+                    <p class="text-lg text-brand-text-secondary max-w-md mx-auto mb-8">The Social Dojo is a private simulator to master the art of recovering from awkward conversations. Practice the moments that haunt you, so you can win in public.</p>
+                    <div class="space-y-3">
+                        <button class="bg-brand-accent text-white font-bold py-4 px-8 rounded-full text-lg w-full max-w-sm mx-auto shadow-lg shadow-amber-500/30">Handle Your First Awkward Moment</button>
+                        <p class="text-sm text-brand-text-secondary">No signup required</p>
                     </div>
-                </div>
-
+                </section>
+                
                 <!-- Social Proof Section -->
-                <div class="text-center py-12">
-                    <p class="text-sm font-semibold text-journey-text-secondary uppercase tracking-widest mb-4">A NEW APPROACH TO CONFIDENCE</p>
-                    <div class="flex justify-center items-center space-x-8 grayscale opacity-60">
-                        <p class="font-bold text-xl">Forbes</p>
-                        <p class="font-bold text-xl">Psychology Today</p>
+                <section class="dojo-dark-bg text-white py-16">
+                    <div class="max-w-4xl mx-auto px-6">
+                        <div class="text-center mb-12"><h2 class="font-bold text-3xl mb-2">You're Not Alone. And Yes, This Works.</h2><p class="text-lg text-slate-400">Here's what our first users are saying.</p></div>
+                        <div class="space-y-6">
+                            <div class="bg-slate-800 p-6 rounded-2xl border border-slate-700"><p class="text-lg text-slate-300 leading-relaxed italic">"Being able to practice without the fear of being judged is everything. My confidence for real-life chats has skyrocketed."</p><p class="font-semibold text-white mt-4">— Sarah J., Early User</p></div>
+                            <div class="bg-slate-800 p-6 rounded-2xl border border-slate-700"><p class="text-lg text-slate-300 leading-relaxed italic">"The 'forgot the name' scenario was literally me last week. Practicing it here first was a game-changer. Felt like a superpower."</p><p class="font-semibold text-white mt-4">— David L., Beta Tester</p></div>
+                        </div>
                     </div>
-                </div>
+                </section>
 
+                <!-- "What You Get" Section -->
+                <section class="bg-brand-bg py-16">
+                    <div class="px-6">
+                         <h2 class="font-bold text-3xl text-center text-brand-dark mb-8">What's Inside The Dojo?</h2>
+                         <div class="space-y-6">
+                             <div class="flex items-start space-x-4"><div class="w-12 h-12 bg-amber-100 text-brand-accent rounded-xl flex items-center justify-center shrink-0"><svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg></div><div><h4 class="font-bold text-brand-dark">Realistic AI Characters</h4><p class="text-sm text-brand-text-secondary">Practice with AI avatars designed to replicate real-world personalities and reactions.</p></div></div>
+                             <div class="flex items-start space-x-4"><div class="w-12 h-12 bg-amber-100 text-brand-accent rounded-xl flex items-center justify-center shrink-0"><svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path></svg></div><div><h4 class="font-bold text-brand-dark">Step-by-Step Curriculum</h4><p class="text-sm text-brand-text-secondary">A guided journey that builds your skills from basic openers to advanced techniques.</p></div></div>
+                             <div class="flex items-start space-x-4"><div class="w-12 h-12 bg-amber-100 text-brand-accent rounded-xl flex items-center justify-center shrink-0"><svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg></div><div><h4 class="font-bold text-brand-dark">The Coach's Playbook</h4><p class="text-sm text-brand-text-secondary">Our premium review tool shows you exactly what you did right and where you can improve.</p></div></div>
+                         </div>
+                    </div>
+                </section>
+                
                  <!-- Final CTA Section -->
-                 <div class="bg-journey-dark text-white text-center px-6 py-16">
-                    <h2 class="font-bold text-3xl mb-4">Stop Cringing. Start Practicing.</h2>
-                    <p class="text-lg text-white/70 mb-8">Your first Intervention Scenario is free. No account required.</p>
-                    <button class="bg-journey-accent text-white font-bold py-4 px-8 rounded-lg text-lg w-full max-w-xs mx-auto">
-                        Start Your First Intervention
-                    </button>
-                </div>
-
+                 <section class="relative dojo-dark-bg text-white text-center pt-24 pb-16">
+                    <div class="absolute top-0 left-0 right-0 -mt-px"><svg viewBox="0 0 1440 80" class="block"><path fill="#f7f8fa" d="M0,64L1440,0L1440,0L0,0Z"></path></svg></div>
+                    <div class="px-6 relative z-10">
+                        <h2 class="font-bold text-4xl mb-4">Stop Cringing. Start Practicing.</h2>
+                        <p class="text-lg text-white/70 mb-8">Your first scenario is free. No account required.</p>
+                        <button class="bg-brand-accent text-white font-bold py-4 px-8 rounded-full text-lg w-full max-w-sm mx-auto shadow-lg shadow-amber-500/30">
+                            Start Your First Scenario
+                        </button>
+                    </div>
+                </section>
             </div>
         </div>
     </div>
-
 </body>
 </html>
